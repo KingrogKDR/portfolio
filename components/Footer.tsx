@@ -1,28 +1,43 @@
+import { Data } from "@/data/data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ModeToggle } from "./dark-mode-toggle";
 import { Button } from "./ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./ui/tooltip";
 
-const Footer = () => {
+export function Footer() {
   return (
-    <div
-      className="fixed bottom-0 left-1/2 -translate-x-1/2 z-30 items-center justify-center py-4 px-6 flex h-16
-                 shadow-lg shadow-gray-700/50 dark:shadow-gray-300/70
-                 outline outline-silver-custom
-                 rounded-lg page-gradient-bg"
-    >
-      <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
-      <div className="relative z-40 flex items-center gap-4">
-        {" "}
-        <Button
-          variant="outline"
-          className="hover-gradient-border dark:border-none"
-        >
-          Contact me
-        </Button>
-        <div className="h-6 w-[1px] bg-silver-custom mx-2"></div>
-        <ModeToggle className="hover-gradient-border dark:border-none" />
-      </div>
+    <div className="fixed bottom-4 inset-x-0 flex items-center justify-center z-50 py-4 rounded-xl px-6 bg-background/40 max-w-fit mx-auto shadow dark:shadow-gray-600 shadow-gray-300 backdrop-blur-md border">
+      <nav className="flex items-center space-x-4 sm:space-x-6">
+        <TooltipProvider delayDuration={200}>
+          {Data.navLinks.map((link, index) => (
+            <Tooltip key={index}>
+              <TooltipTrigger asChild>
+                <Button
+                  key={link.title}
+                  variant="outline"
+                  asChild
+                  className="text-foreground border outline-2 outline-silver-custom shadow dark:shadow-gray-600 shadow-gray-300 hover:scale-110 hover-gradient-border transition-all duration-500 text-base sm:text-lg"
+                >
+                  <a href={link.href} aria-label={link.title}>
+                    <FontAwesomeIcon icon={link.icon} className="text-xl" />
+                    <span className="sr-only">{link.title}</span>
+                  </a>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent className="text-xs px-3 py-1.5 rounded-md shadow-md">
+                <p>{link.title}</p>
+              </TooltipContent>
+            </Tooltip>
+          ))}
+        </TooltipProvider>
+        <div className="h-6 w-[1px] bg-silver-custom opacity-70 mx-2"></div>
+        <ModeToggle className="ml-2 hover:scale-110 transition duration-500 hover-gradient-border" />
+      </nav>
     </div>
   );
-};
-
-export default Footer;
+}

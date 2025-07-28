@@ -3,7 +3,6 @@ import { Data } from "@/data/data";
 import { motion } from "motion/react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useTheme } from "next-themes";
 import {
   Tooltip,
   TooltipContent,
@@ -12,7 +11,6 @@ import {
 } from "./ui/tooltip";
 
 export function HeroSection() {
-  const { theme } = useTheme();
   return (
     <div className="pt-20">
       <motion.h1
@@ -55,7 +53,7 @@ export function HeroSection() {
       </motion.p>
 
       <div className="relative flex items-center justify-center w-full">
-        <div className="flex-grow h-px bg-gray-400 dark:bg-gray-600 mr-4 max-w-[100px] sm:max-w-[150px] lg:max-w-[200px]" />
+        <div className="flex-grow h-px bg-gray-400 dark:bg-gray-600 mr-4 max-w-[5.208vw] sm:max-w-[7.813vw] lg:max-w-[10.417vw]" />
 
         <motion.p
           initial={{ opacity: 0.5, y: 100 }}
@@ -70,7 +68,7 @@ export function HeroSection() {
           Contact Me
         </motion.p>
 
-        <div className="flex-grow h-px bg-gray-400 dark:bg-gray-600 ml-4 max-w-[100px] sm:max-w-[150px] lg:max-w-[200px]" />
+        <div className="flex-grow h-px bg-gray-400 dark:bg-gray-600 ml-4 max-w-[5.208vw] sm:max-w-[7.813vw] lg:max-w-[10.417vw]" />
       </div>
 
       <motion.div
@@ -95,17 +93,10 @@ export function HeroSection() {
             transition-all text-gray-800 dark:text-white text-lg hover:scale-110 hover:shadow-sm dark:shadow-gray-600 duration-500"
                   aria-label={social.name}
                 >
-                  {theme === "dark" ? (
-                    <FontAwesomeIcon
-                      icon={social.iconDark}
-                      suppressHydrationWarning
-                    />
-                  ) : (
-                    <FontAwesomeIcon
-                      icon={social.iconLight}
-                      suppressHydrationWarning
-                    />
-                  )}
+                  <FontAwesomeIcon
+                    icon={social.icon}
+                    suppressHydrationWarning
+                  />
                 </a>
               </TooltipTrigger>
               <TooltipContent

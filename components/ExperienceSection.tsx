@@ -11,7 +11,7 @@ const ExperienceSection = () => {
   const inactiveTabClasses =
     "bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground border-2 border-silver-custom shadow-sm shadow-gray-400";
   return (
-    <div className="flex flex-col border border-silver-custom rounded-lg p-4 max-w-screen-md my-10 shadow-sm shadow-gray-400">
+    <div className="flex flex-col border border-silver-custom rounded-lg p-4 my-10 shadow-sm shadow-gray-400">
       <div className="flex justify-center space-x-4 my-6">
         <Button
           variant="default"
@@ -36,24 +36,23 @@ const ExperienceSection = () => {
         {activeTab === "experience" && (
           <div>
             <div className="relative pl-8">
-              <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-silver-custom opacity-50"></div>
               {Data.experienceData.map((item) => (
                 <div key={item.id} className="mb-8 relative">
-                  <div className="absolute left-[-4vw] p-px top-0 z-10 bg-card border-2 border-silver-custom flex items-center justify-center w-18 h-18">
+                  <div className="absolute lg:left-[-4.5vw] sm:left-[-9vw] max-sm:left-[-19vw] top-0 z-10 bg-card rounded-full overflow-hidden border-2 border-silver-custom flex items-center justify-center w-18 h-18">
                     <Image
                       src={item.icon}
                       alt={item.company}
-                      width={52}
-                      height={52}
+                      width={80}
+                      height={80}
                       className="object-contain w-full h-full"
                     />
                   </div>
                   <div className="ml-4">
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-xl font-semibold">
+                    <div className="flex justify-between max-sm:grid items-center">
+                      <h3 className="text-xl font-semibold max-sm:text-sm">
                         {item.title} - {item.company}
                       </h3>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-muted-foreground max-sm:mt-2 max-sm:text-xs">
                         {item.duration}
                       </p>
                     </div>
@@ -63,7 +62,7 @@ const ExperienceSection = () => {
                           {item.techStack.map((tech, i) => (
                             <span
                               key={i}
-                              className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 px-3 py-1 rounded-full text-xs font-medium"
+                              className="bg-gray-200 max-sm:text-[10px] text-gray-800 dark:bg-gray-700 dark:text-gray-200 px-3 py-1 rounded-full text-xs font-medium"
                             >
                               {tech}
                             </span>
@@ -73,7 +72,9 @@ const ExperienceSection = () => {
                     )}
                     <ul className="list-disc list-inside text-base mt-2 space-y-1">
                       {item.description.map((desc, i) => (
-                        <li key={i}>{desc}</li>
+                        <li key={i} className="mb-2 max-sm:text-[14px]">
+                          {desc}
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -86,28 +87,27 @@ const ExperienceSection = () => {
         {activeTab === "education" && (
           <div>
             <div className="relative pl-8">
-              <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-silver-custom opacity-50"></div>
               {Data.educationData.map((item) => (
                 <div key={item.id} className="mb-8 relative">
-                  <div className="absolute left-[-4vw] p-px top-0 z-10 bg-card border-2 border-silver-custom flex items-center justify-center w-18 h-18">
+                  <div className="absolute lg:left-[-4.1vw] md:left-[-4.7vw] max-md:left-[-10.5vw] max-sm:left-[-18vw] top-0 z-10 bg-card rounded-full overflow-hidden border-2 border-silver-custom flex items-center justify-center w-18 h-18">
                     <Image
                       src={item.icon}
                       alt={item.institution}
-                      width={52}
-                      height={52}
+                      width={80}
+                      height={80}
                       className="object-contain w-full h-full"
                     />
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-xl font-semibold">
+                    <h3 className="text-xl font-semibold max-sm:text-sm">
                       {item.title} - {item.institution}
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground mt-2 max-sm:text-xs">
                       {item.duration} | {item.result}
                     </p>
                     <ul className="list-disc list-inside text-base mt-2 space-y-1">
                       {item.description.map((desc, i) => (
-                        <li key={i} className="mb-2">
+                        <li key={i} className="mb-2 max-sm:text-[14px]">
                           {desc}
                         </li>
                       ))}
