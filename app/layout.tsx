@@ -17,6 +17,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Abhishek Saikia - Portfolio",
   description: "My Portfolio",
+  keywords: [
+    "portfolio",
+    "developer",
+    "Abhishek Saikia",
+    "India",
+    "software",
+    "engineer",
+  ],
 };
 
 export default function RootLayout({
@@ -30,12 +38,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
           <Footer />
         </ThemeProvider>

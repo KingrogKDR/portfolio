@@ -54,6 +54,25 @@ export function HeroSection() {
         {Data.profession}
       </motion.p>
 
+      <div className="relative flex items-center justify-center w-full">
+        <div className="flex-grow h-px bg-gray-400 dark:bg-gray-600 mr-4 max-w-[100px] sm:max-w-[150px] lg:max-w-[200px]" />
+
+        <motion.p
+          initial={{ opacity: 0.5, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="bg-gradient-to-br from-pink-300 to-gray-600 dark:bg-gradient-to-br dark:from-purple-200 dark:to-slate-700 py-4 bg-clip-text text-center text-xl font-medium tracking-tight text-transparent md:text-3xl z-10 whitespace-nowrap"
+        >
+          Contact Me
+        </motion.p>
+
+        <div className="flex-grow h-px bg-gray-400 dark:bg-gray-600 ml-4 max-w-[100px] sm:max-w-[150px] lg:max-w-[200px]" />
+      </div>
+
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +101,10 @@ export function HeroSection() {
                       suppressHydrationWarning
                     />
                   ) : (
-                    <FontAwesomeIcon icon={social.iconLight} />
+                    <FontAwesomeIcon
+                      icon={social.iconLight}
+                      suppressHydrationWarning
+                    />
                   )}
                 </a>
               </TooltipTrigger>

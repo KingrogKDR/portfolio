@@ -10,7 +10,7 @@ const Footer = () => {
                  rounded-lg page-gradient-bg"
     >
       <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
-      <div className="relative z-40 flex items-center gap-5">
+      <div className="relative z-40 flex items-center gap-4">
         {" "}
         <Button
           variant="outline"
