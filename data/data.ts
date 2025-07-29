@@ -44,7 +44,7 @@ export const Data = {
     },
     {
       name: "Resume",
-      url: "/home/kingorg/Downloads/resume.pdf",
+      url: "/docs/resume.pdf",
       icon: faFile,
     },
   ],
@@ -131,7 +131,7 @@ export const Data = {
       description:
         "A personal portfolio website showcasing my skills, projects, and experience, built with Next.js, Tailwind CSS, and Framer Motion for dynamic animations.",
       imageSrc: "/images/portfolio-v1.png",
-      liveLink: "https://www.yourportfoliowebsite.com",
+      liveLink: "https://portfolio-ten-kohl-53.vercel.app",
       sourceLink: "https://github.com/KingrogKDR/portfolio",
     },
     {
