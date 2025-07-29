@@ -2,6 +2,7 @@
 
 import ExperienceSection from "@/components/ExperienceSection";
 import { HeroSection } from "@/components/HeroSection";
+import ProjectSection from "@/components/ProjectSection";
 import SkillsSection from "@/components/SkillsSection";
 import { useEffect, useRef, useState } from "react";
 
@@ -66,6 +67,7 @@ const LazySection = ({
 };
 
 export default function Page() {
+  const currentYear = new Date().getFullYear();
   return (
     <div className="relative page-gradient-bg min-h-screen">
       <main
@@ -89,11 +91,22 @@ export default function Page() {
         </LazySection>
 
         <LazySection id="projects">
-          <div className="min-h-screen flex items-center justify-center text-4xl">
-            Projects Section Content
+          <div className="mb-10 flex items-center justify-center text-4xl">
+            <ProjectSection />
           </div>
         </LazySection>
       </main>
+      <footer className="pb-36">
+        <div className="relative flex items-center justify-center w-full">
+          <div className="flex-grow h-[2px] bg-gray-400 dark:bg-gray-600 mr-4 max-w-[6.25vw] sm:max-w-[9.375vw] lg:max-w-[13.021vw]" />
+
+          <div className="bg-gradient-to-br from-orange-400 to-gray-600 dark:bg-gradient-to-br dark:from-red-200 dark:to-slate-700 py-4 bg-clip-text text-center text-xl font-medium tracking-tight text-transparent md:text-3xl z-10 whitespace-nowrap">
+            <span>© {currentYear} Abhishek Saikia.</span>
+          </div>
+
+          <div className="flex-grow h-[2px] bg-gray-400 dark:bg-gray-600 ml-4 max-w-[6.25vw] sm:max-w-[9.375vw] lg:max-w-[13.021vw]" />
+        </div>
+      </footer>
     </div>
   );
 }

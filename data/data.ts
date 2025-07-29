@@ -124,4 +124,58 @@ export const Data = {
     { title: "Skills", href: "#skills", icon: faCodeBranch },
     { title: "Projects", href: "#projects", icon: faFolderOpen },
   ],
+  projectsData: [
+    {
+      id: 1,
+      title: "Portfolio Website v1",
+      description:
+        "A personal portfolio website showcasing my skills, projects, and experience, built with Next.js, Tailwind CSS, and Framer Motion for dynamic animations.",
+      imageSrc: "/images/portfolio-v1.png",
+      liveLink: "https://www.yourportfoliowebsite.com",
+      sourceLink: "https://github.com/KingrogKDR/portfolio",
+    },
+    {
+      id: 2,
+      title: "VaultGuard",
+      description:
+        "Collaborated and Developed a comprehensive secure data sharing platform that enables users to safely share their financial data with trusted fintech applications",
+      imageSrc: "/images/Vaultguard.png",
+      isLight: true,
+      sourceLink: "https://github.com/laatu08/cyberhack",
+    },
+    {
+      id: 3,
+      title: "Store Doc",
+      description:
+        "A web application designed to facilitate the upload and storage of files on the web and local storage solutions.",
+      imageSrc: "/images/storedoc.png",
+      isLight: true,
+      liveLink: "https://store-doc-one.vercel.app",
+      sourceLink: "https://github.com/KingrogKDR/storeDoc",
+    },
+    {
+      id: 4,
+      title: "Shell in Go",
+      description:
+        "A simple shell implemented in Go that I designed to learn and improve on the language as well as to understand on a low level as to how a shell works",
+      imageSrc: "/images/shell.png",
+      sourceLink: "https://github.com/KingrogKDR/my-shell-go",
+    },
+    {
+      id: 5,
+      title: "Http Server in Go",
+      description:
+        "A simple HTTP server written in Go, designed to handle basic web requests and responses. This server is lightweight, easy to set up, and perfect for small projects or learning purposes.",
+      imageSrc: "/images/http-server.png",
+      sourceLink: "https://github.com/KingrogKDR/my-http-server",
+    },
+    {
+      id: 6,
+      title: "Unisafe",
+      description: "A website built to monitor security in an open campus.",
+      isLight: true,
+      imageSrc: "/images/Unisafe.png",
+      sourceLink: "https://github.com/KingrogKDR/Campus-security",
+    },
+  ],
 };
