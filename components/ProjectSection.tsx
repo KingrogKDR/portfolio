@@ -13,7 +13,7 @@ const ProjectSection = () => {
 
         <div className="flex-grow h-[2px] bg-gray-400 dark:bg-gray-600 ml-4 max-w-[6.25vw] sm:max-w-[9.375vw] lg:max-w-[13.021vw]" />
       </div>
-      <div className="mt-3 max-sm:mx-6">
+      <div className="mt-3 max-sm:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 justify-center">
           {Data.projectsData.map((project, i) => (
             <ProjectCard
