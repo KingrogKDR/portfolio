@@ -12,7 +12,7 @@ import {
 export function Footer() {
   return (
     <div className="fixed bottom-4 inset-x-0 flex items-center justify-center z-50 py-4 rounded-xl px-6 bg-background/40 max-w-fit mx-auto shadow dark:shadow-gray-600 shadow-gray-300 backdrop-blur-md border">
-      <nav className="flex items-center space-x-4 sm:space-x-6">
+      <nav className="flex items-center space-x-1 sm:space-x-6">
         <TooltipProvider delayDuration={200}>
           {Data.navLinks.map((link, index) => (
             <Tooltip key={index}>
