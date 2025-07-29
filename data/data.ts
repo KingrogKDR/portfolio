@@ -131,6 +131,7 @@ export const Data = {
       description:
         "A personal portfolio website showcasing my skills, projects, and experience, built with Next.js, Tailwind CSS, and Framer Motion for dynamic animations.",
       imageSrc: "/images/portfolio-v1.png",
+      techStack: ["NextJs", "Typescript", "TailwindCSS"],
       liveLink: "https://portfolio-ten-kohl-53.vercel.app",
       sourceLink: "https://github.com/KingrogKDR/portfolio",
     },
@@ -140,6 +141,14 @@ export const Data = {
       description:
         "Collaborated and Developed a comprehensive secure data sharing platform that enables users to safely share their financial data with trusted fintech applications",
       imageSrc: "/images/Vaultguard.png",
+      techStack: [
+        "React.js",
+        "Docker",
+        "Typescript",
+        "Redis",
+        "Prisma",
+        "ELK stack",
+      ],
       isLight: true,
       sourceLink: "https://github.com/laatu08/cyberhack",
     },
@@ -149,6 +158,7 @@ export const Data = {
       description:
         "A web application designed to facilitate the upload and storage of files on the web and local storage solutions.",
       imageSrc: "/images/storedoc.png",
+      techStack: ["NextJs", "Appwrite", "TailwindCSS"],
       isLight: true,
       liveLink: "https://store-doc-one.vercel.app",
       sourceLink: "https://github.com/KingrogKDR/storeDoc",
@@ -159,6 +169,7 @@ export const Data = {
       description:
         "A simple shell implemented in Go that I designed to learn and improve on the language as well as to understand on a low level as to how a shell works",
       imageSrc: "/images/shell.png",
+      techStack: ["Go", "Bash"],
       sourceLink: "https://github.com/KingrogKDR/my-shell-go",
     },
     {
@@ -167,6 +178,7 @@ export const Data = {
       description:
         "A simple HTTP server written in Go, designed to handle basic web requests and responses. This server is lightweight, easy to set up, and perfect for small projects or learning purposes.",
       imageSrc: "/images/http-server.png",
+      techStack: ["Go"],
       sourceLink: "https://github.com/KingrogKDR/my-http-server",
     },
     {
@@ -175,6 +187,7 @@ export const Data = {
       description: "A website built to monitor security in an open campus.",
       isLight: true,
       imageSrc: "/images/Unisafe.png",
+      techStack: ["React.js", "Express.js", "Node.js", "MongoDB"],
       sourceLink: "https://github.com/KingrogKDR/Campus-security",
     },
   ],

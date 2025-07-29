@@ -12,6 +12,7 @@ interface ProjectCardProps {
   isLightImage?: boolean;
   liveLink?: string;
   sourceLink: string;
+  techStack: string[];
 }
 
 export function ProjectCard({
@@ -21,6 +22,7 @@ export function ProjectCard({
   isLightImage,
   liveLink,
   sourceLink,
+  techStack,
 }: ProjectCardProps) {
   return (
     <Card className="w-full max-w-sm relative group rounded-2xl overflow-hidden p-[1px] shadow-lg">
@@ -38,8 +40,8 @@ export function ProjectCard({
         <CardHeader className="absolute top-0 left-0 z-20 p-4">
           <CardTitle
             className={`${
-              isLightImage ? "text-slate-900 mt-2" : "text-slate-200"
-            } text-lg font-bold`}
+              isLightImage ? "text-black mt-2" : "text-slate-200"
+            } text-lg font-bold whitespace-nowrap text-ellipsis`}
           >
             {title}
           </CardTitle>
@@ -47,6 +49,20 @@ export function ProjectCard({
 
         <div className="absolute bottom-0 left-0 right-0 z-20 p-4 text-white">
           <p className="text-xs sm:text-sm mb-4 line-clamp-3">{description}</p>
+          {techStack && techStack.length > 0 && (
+            <div className="mb-4">
+              <div className="flex flex-wrap gap-2">
+                {techStack.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="bg-gray-200 max-sm:text-[10px] text-gray-800 dark:bg-gray-700 dark:text-gray-200 px-3 py-1 rounded-full text-xs font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
 
           <CardFooter className="flex text-sm gap-3 p-0 justify-start">
             {liveLink && (
