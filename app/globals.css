@@ -202,12 +202,3 @@ section {
 }
 
 
-.icon-theme {
-  color: black; /* Light mode default */
-}
-
-@media (prefers-color-scheme: light) {
-  .icon-theme {
-    color: white; /* Dark mode default */
-  }
-}
