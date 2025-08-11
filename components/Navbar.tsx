@@ -9,7 +9,7 @@ import {
   TooltipTrigger,
 } from "./ui/tooltip";
 
-export function Footer() {
+export function Navbar() {
   return (
     <div className="fixed mb-4 bottom-0 left-1/2 -translate-x-1/2 flex items-center justify-center z-50 py-4 rounded-xl px-2 sm:px-4 md:px-6 bg-background/40 max-w-fit shadow dark:shadow-gray-600 shadow-gray-300 backdrop-blur-md border">
       <nav className="flex items-center space-x-1 sm:space-x-4 md:space-x-6">

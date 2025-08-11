@@ -39,9 +39,8 @@ export function ProjectCard({
 
         <CardHeader className="absolute top-0 left-0 z-20 p-4">
           <CardTitle
-            className={`${
-              isLightImage ? "text-black mt-2" : "text-slate-200"
-            } text-lg font-bold whitespace-nowrap text-ellipsis`}
+            className={`${isLightImage ? "text-black md:mt-2" : "text-slate-200"
+              } text-lg font-bold whitespace-nowrap text-ellipsis`}
           >
             {title}
           </CardTitle>

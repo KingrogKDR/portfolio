@@ -126,6 +126,17 @@
 }
 
 /* custome styles */
+html {
+  scrollbar-gutter: stable;
+}
+
+html, body {
+  overflow-x : hidden;
+}
+
+section {
+  max-width: 100%;
+}
 
 .hover-gradient-border {
   position: relative;
@@ -188,4 +199,15 @@
     rgb(var(--page-bg-gradient-start)),
     rgb(var(--page-bg-gradient-end))
   );
+}
+
+
+.icon-theme {
+  color: black; /* Light mode default */
+}
+
+@media (prefers-color-scheme: light) {
+  .icon-theme {
+    color: white; /* Dark mode default */
+  }
 }

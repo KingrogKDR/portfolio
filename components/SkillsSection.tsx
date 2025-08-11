@@ -13,15 +13,15 @@ const SkillsSection = () => {
 
         <div className="flex-grow h-[2px] bg-gray-400 dark:bg-gray-600 ml-4 max-w-[6.25vw] sm:max-w-[9.375vw] lg:max-w-[13.021vw]" />
       </div>
-      <div className="mt-3 max-sm:mx-4">
+      <div className="mt-3 max-sm:px-8">
         <div className="flex flex-wrap gap-3 justify-center">
           {Data.skills.map((skill, i) => (
             <span
               key={i}
-              className="bg-gradient-to-br to-slate-400 dark:bg-gradient-to-br dark:from-gray-500 dark:to-slate-800 max-sm:text-[10px] text-gray-800 dark:text-gray-200 px-4 py-2 rounded-md text-sm font-medium flex items-center gap-2"
+              className="bg-gradient-to-br to-slate-400 dark:bg-gradient-to-br dark:from-gray-500 dark:to-slate-800 max-sm:text-[10px] text-gray-800 dark:text-gray-200 px-4 py-4 rounded-md text-sm font-medium flex items-center gap-2 flex-col"
             >
               {skill.icon && (
-                <FontAwesomeIcon icon={skill.icon} className="text-base" />
+                <i className={`${skill.icon} text-base icon-theme max-sm:text-[1.5rem] text-[3rem]`} />
               )}
               {skill.name}
             </span>
